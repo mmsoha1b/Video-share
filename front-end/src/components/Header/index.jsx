@@ -40,7 +40,7 @@ const Header =()=>{
   }
   return(
     <>
-    <nav className="w-full mt-2">
+    <nav className="w-full mt-1">
       <div className="flex px-4  justify-between items-end gap-x-10">
         {/* Hamburger and Logo div */}
         <div className="flex gap-x-2 md:gap-x-4">
@@ -51,7 +51,7 @@ const Header =()=>{
         </div>
 
         {/* Search and  microphone div*/}
-        <div className="min-w-0  m:visible gap-4 px-2 md:flex md:ml-[40px] md:mr-[40px] h-[40px] flex-grow max-w-3xl flex-shrink hidden">
+        <div className="min-w-0 lg:pl-12  m:visible gap-4 px-2 md:flex md:ml-[40px] md:mr-[40px] h-[40px] flex-grow max-w-3xl flex-shrink hidden">
           <div className='flex flex-shrink w-full  min-w-0 rounded-s-full rounded-e-full '>
             <div className='min-w-0 focus-within:border-solid focus-within:border-slate-400  flex shadow-inner justify-start items-center rounded-s-full flex-grow bg-white border-solid border-gray-300  border-2 pl-[1em] pr-[0em]  text-lg text-gray-600'>
              {searchActive? <div className='h-full flex bg-none pr-4 justify-center items-center'> <AiOutlineSearch className='text-2xl'/></div>:null}
@@ -69,7 +69,7 @@ const Header =()=>{
         </div>
 
         {/* Video Bell Profile Div */}
-        <div className="flex gap-x-2 md:gap-x-4">
+        <div className="flex gap-x-[2px] md:gap-x-4">
           <NavIcon Icon= { <AiOutlineSearch className="text-2xl"/> } clickHandler={acitvateSearch} extraStyle="md:hidden"/>
           <NavIcon Icon= { <BiSolidMicrophone className='text-2xl'/> } extraStyle="md:hidden"/>
           <NavIcon Icon= { <BiVideoPlus className='text-2xl'/> }/>
