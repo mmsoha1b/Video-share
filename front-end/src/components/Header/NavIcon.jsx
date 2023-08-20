@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 
-const NavIcon = ({ Icon, extraStyle })=>{
+const NavIcon = ({ Icon, extraStyle, clickHandler })=>{
   return(
-    <div className={`w-11 h-11 p-2 hover:bg-gray-500 hover:bg-opacity-20 hover:cursor-pointer rounded-full flex justify-center items-center ${extraStyle}`}>
+    <div onClick={clickHandler} className={`w-11 h-11 p-2 hover:bg-gray-500 hover:bg-opacity-20 hover:cursor-pointer rounded-full flex justify-center items-center ${extraStyle}`}>
       {Icon}
     </div>
   )
@@ -11,6 +11,7 @@ const NavIcon = ({ Icon, extraStyle })=>{
 NavIcon.propTypes={
   Icon: PropTypes.element,
   extraStyle: PropTypes.string,
+  clickHandler:PropTypes.func,
 }
 
 export default NavIcon
